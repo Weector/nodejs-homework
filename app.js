@@ -1,20 +1,14 @@
 const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
+const dotenv = require("dotenv");
 const contactsRouter = require("./routes/api/contacts");
-const mongoose = require("mongoose");
 
 const app = express();
 
 const formatsLogger = app.get("env") === "development" ? "dev" : "short";
 
-const DB_HOST =
-  "mongodb+srv://Victor:JoDkvGXSsQB7eEet@cluster0.qtpz8ii.mongodb.net/db-contacts?retryWrites=true&w=majority";
-mongoose.set("strictQuery", true);
-mongoose
-  .connect(DB_HOST)
-  .then(() => console.log("Database connection successful"))
-  .catch((error) => console.log(error.message));
+dotenv.config();
 
 app.use(logger(formatsLogger));
 app.use(cors());
