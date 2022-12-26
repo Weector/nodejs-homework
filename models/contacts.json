@@ -1,17 +1,5 @@
 [
   {
-    "id": "1",
-    "name": "Allen Raymond",
-    "email": "nulla.ante@vestibul.co.uk",
-    "phone": "(992) 914-3792"
-  },
-  {
-    "id": "2",
-    "name": "Chaim Lewis",
-    "email": "dui.in@egetlacus.ca",
-    "phone": "(294) 840-6685"
-  },
-  {
     "id": "3",
     "name": "Kennedy Lane",
     "email": "mattis.Cras@nonenimMauris.net",
@@ -60,21 +48,9 @@
     "phone": "(748) 206-2688"
   },
   {
-    "id": "4ab0f4bc-eee9-4a6d-b5c4-8ad39f5bad4a",
-    "name": "Sirius Black",
-    "email": "sir.black@gmail.com",
-    "phone": "(999) 399-9999"
-  },
-  {
-    "id": "aee5163e-70e5-4480-b26f-f27f27190909",
-    "name": "Raw Taken",
-    "email": "raw.taken@gmail.com",
-    "phone": "(444) 444-4444"
-  },
-  {
-    "id": "0ee2aae7-aa19-4cfd-8cde-9f87cbd9b6a8",
-    "name": "Super Man",
-    "email": "super@man.crypto",
-    "phone": "(555) 333-3333"
+    "id": "3ed18750-6a08-4baa-973f-e3ba13477de5",
+    "name": "WWW WWW",
+    "email": "www@gmail.net",
+    "phone": "(333)-333-3333"
   }
 ]
