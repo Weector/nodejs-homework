@@ -1,12 +1,12 @@
-const { listContacts } = require("../../models/contacts");
 const createError = require("http-errors");
 const { ctrlWrapper } = require("../../helpers");
+const { Contact } = require("../../models");
 
 const getAll = async (req, res, next) => {
-  const result = await listContacts();
+  const result = await Contact.find({});
 
   if (!result.length) {
-    throw createError(404, "Contacts list is empty.");
+    throw createError(200, "Contacts list is empty.");
   }
   res.json({
     status: "success",

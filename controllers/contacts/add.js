@@ -1,10 +1,8 @@
-const { addContact } = require("../../models/contacts");
 const { ctrlWrapper } = require("../../helpers");
+const { Contact } = require("../../models");
 
 const add = async (req, res, next) => {
-  const { body } = req;
-
-  const result = await addContact(body);
+  const result = await Contact.create(req.body);
 
   res.status(201).json({
     status: "created",
