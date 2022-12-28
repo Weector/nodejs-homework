@@ -1,18 +1,16 @@
-const { removeContact } = require("../../models/contacts");
+const { ctrlWrapper } = require("../../helpers");
+const { Contact } = require("../../models");
 
 const removeById = async (req, res, next) => {
   const { contactId } = req.params;
-  const result = await removeContact(contactId);
-  try {
-    res.json({
-      status: "success",
-      code: 200,
-      message: "contact deleted",
-      data: { result },
-    });
-  } catch (e) {
-    next(e);
-  }
+
+  const result = await Contact.findByIdAndRemove(contactId);
+  res.json({
+    status: "success",
+    code: 200,
+    message: "contact deleted",
+    data: { result },
+  });
 };
 
-module.exports = removeById;
+module.exports = ctrlWrapper(removeById);
